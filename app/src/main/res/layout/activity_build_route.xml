@@ -1,0 +1,53 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:chartview="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                tools:context=".MainActivity" >
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_point_button"
+        android:text="Add Point"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/build_route_x_axis_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/build_route_chart_x_axis_label"/>
+
+    <com.appsbylyon.mapster.custom.VerticalTextView
+        android:id="@+id/build_route_left_y_axis_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:gravity="bottom"
+        android:layout_centerVertical="true"
+        android:text="@string/build_route_chart_left_y_axis_label"/>
+
+        <com.fima.chartview.ChartView
+        android:id="@+id/build_route_chart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/build_route_left_y_axis_label"
+        android:layout_above="@id/build_route_x_axis_label"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="8dp"
+        chartview:bottomLabelHeight="20dp"
+        chartview:gridLineColor="#E5E5E5"
+        chartview:gridLineWidth="1dp"
+        chartview:gridLinesHorizontal="5"
+        chartview:gridLinesVertical="5"
+        chartview:leftLabelWidth="56dp"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

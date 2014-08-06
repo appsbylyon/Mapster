@@ -1,6 +1,8 @@
 package com.appsbylyon.mapster;
 
 import android.app.Activity;
+import android.app.FragmentManager;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -28,8 +30,15 @@ public class MapActivity extends Activity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
+        FragmentManager fm = this.getFragmentManager();
+
+        Bundle bundle = new Bundle();
+        switch(id)
+        {
+            case R.id.action_build_route:
+                Intent buildRouteIntent = new Intent(this, RouteBuilder.class);
+                startActivity(buildRouteIntent);
+                break;
         }
         return super.onOptionsItemSelected(item);
     }

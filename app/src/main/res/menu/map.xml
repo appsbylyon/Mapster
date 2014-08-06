@@ -5,4 +5,8 @@
         android:title="@string/action_settings"
         android:orderInCategory="100"
         android:showAsAction="never" />
+
+    <item android:id="@+id/action_build_route"
+          android:title="@string/action_route_builder"
+          android:showAsAction="never"/>
 </menu>
