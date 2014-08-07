@@ -27,7 +27,7 @@ public class ValueLabelAdapter extends com.fima.chartview.LabelAdapter {
         }
 
         labelTextView = (TextView) convertView;
-
+        String formatString = "%1.0f";
         int gravity = Gravity.CENTER;
         if (mOrientation == LabelOrientation.VERTICAL) {
             if (position == 0) {
@@ -38,6 +38,8 @@ public class ValueLabelAdapter extends com.fima.chartview.LabelAdapter {
                 gravity = Gravity.CENTER | Gravity.RIGHT;
             }
         } else if (mOrientation == LabelOrientation.HORIZONTAL) {
+            formatString = "%.1f";
+
             if (position == 0) {
                 gravity = Gravity.CENTER | Gravity.LEFT;
             } else if (position == getCount() - 1) {
@@ -46,8 +48,8 @@ public class ValueLabelAdapter extends com.fima.chartview.LabelAdapter {
         }
 
         labelTextView.setGravity(gravity);
-        labelTextView.setPadding(8, 0, 8, 0);
-        labelTextView.setText(String.format("%.1f", getItem(position)));
+        labelTextView.setPadding(2, 0, 2, 0);
+        labelTextView.setText(String.format(formatString, getItem(position)));
 
         return convertView;
     }

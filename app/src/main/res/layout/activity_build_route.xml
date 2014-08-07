@@ -6,14 +6,87 @@
                 android:orientation="vertical"
                 tools:context=".MainActivity" >
 
-    <Button
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/add_point_button"
-        android:text="Add Point"/>
+        android:background="@drawable/general_border9"
+        android:orientation="horizontal">
+
+        <ToggleButton
+            android:id="@+id/build_route_add_points_toggle_button"
+            android:layout_width="@dimen/standard_button_height"
+            android:layout_height="@dimen/standard_button_height"
+            android:layout_margin="2dp"
+            android:background="@drawable/add_button"
+            android:textOff=""
+            android:textOn=""/>
+
+        <ToggleButton
+            android:id="@+id/build_route_show_markers_toggle_button"
+            android:layout_width="@dimen/standard_button_height"
+            android:layout_height="@dimen/standard_button_height"
+            android:layout_margin="2dp"
+            android:background="@drawable/marker_button"
+            android:textOff=""
+            android:textOn=""/>
+
+        <ToggleButton
+            android:id="@+id/build_route_auto_toggle_button"
+            android:layout_width="@dimen/standard_button_height"
+            android:layout_height="@dimen/standard_button_height"
+            android:layout_margin="2dp"
+            android:background="@drawable/auto_button"
+            android:textOff=""
+            android:textOn=""/>
+
+        <TextView
+            android:id="@+id/build_route_distance_label"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/standard_button_height"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/tv_background9"
+            android:text="DISTANCE LABEL"/>
+
+        <Button
+            android:id="@+id/build_route_undo_button"
+            android:layout_width="@dimen/standard_button_height"
+            android:layout_height="@dimen/standard_button_height"
+            android:layout_margin="2dp"
+            android:background="@drawable/undo_button"/>
+
+        <Button
+            android:id="@+id/build_route_save_button"
+            android:layout_width="@dimen/standard_button_height"
+            android:layout_height="@dimen/standard_button_height"
+            android:layout_margin="2dp"
+            android:background="@drawable/save_button"/>
+        </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/general_border9"
+        android:layout_weight="4">
+
+        <fragment
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:name="com.google.android.gms.maps.MapFragment"/>
+        </LinearLayout>
+
+
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:background="@drawable/general_border9"
+        android:layout_weight="7">
 
     <TextView
         android:id="@+id/build_route_x_axis_label"
@@ -35,18 +108,21 @@
         <com.fima.chartview.ChartView
         android:id="@+id/build_route_chart"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_toRightOf="@id/build_route_left_y_axis_label"
         android:layout_above="@id/build_route_x_axis_label"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:layout_margin="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
         chartview:bottomLabelHeight="20dp"
         chartview:gridLineColor="#E5E5E5"
         chartview:gridLineWidth="1dp"
         chartview:gridLinesHorizontal="5"
         chartview:gridLinesVertical="5"
-        chartview:leftLabelWidth="56dp"/>
+        chartview:leftLabelWidth="45dp"/>
+
+
 
     </RelativeLayout>
 

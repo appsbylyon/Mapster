@@ -2,12 +2,12 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 19
-    buildToolsVersion "20.0.0"
+    buildToolsVersion "19.1.0"
 
     defaultConfig {
         applicationId "com.appsbylyon.mapster"
         minSdkVersion 15
-        targetSdkVersion 20
+        targetSdkVersion 18
         versionCode 1
         versionName "1.0"
     }
@@ -21,4 +21,6 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    compile 'com.google.android.gms:play-services:5.0.77'
 }

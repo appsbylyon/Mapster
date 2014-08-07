@@ -7,5 +7,13 @@
     <string name="action_route_builder">Build Route</string>
     <string name="build_route_chart_x_axis_label">Point Number</string>
     <string name="build_route_chart_left_y_axis_label">Feet</string>
+    <string name="build_route_add_points_toggle_button_label">Add Points</string>
+    <string name="build_route_undo_button_label">Undo</string>
+    <string name="build_route_save_button_label">Save</string>
+    <string name="build_route_no_distance_text">No Distance To Display</string>
+    <string name="build_route_has_distance_text">Route Distance: </string>
+    <string name="build_route_show_markers_toggle_button_label">Markers</string>
+    <string name="build_route_auto_toggle_button_label">Auto</string>
 
+    <dimen name="standard_button_height">50dp</dimen>
 </resources>
