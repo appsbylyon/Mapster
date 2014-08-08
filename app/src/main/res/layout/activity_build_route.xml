@@ -4,7 +4,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
+                android:background="@drawable/general_border9"
                 tools:context=".MainActivity" >
+    <TextView
+        android:id="@+id/build_route_route_title_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ROUTE TITLE"
+        android:textColor="#000"
+        android:layout_margin="3dp"
+        android:layout_gravity="center"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -62,10 +71,42 @@
             android:layout_height="@dimen/standard_button_height"
             android:layout_margin="2dp"
             android:background="@drawable/save_button"/>
+        <ToggleButton
+            android:id="@+id/build_route_search_toggle_button"
+            android:layout_width="@dimen/standard_button_height"
+            android:layout_height="@dimen/standard_button_height"
+            android:layout_margin="2dp"
+            android:background="@drawable/search_button"
+            android:textOff=""
+            android:textOn=""/>
         </LinearLayout>
 
 
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp">
+        <Button
+            android:layout_width="@dimen/standard_button_height"
+            android:layout_height="@dimen/standard_button_height"
+            android:layout_alignParentRight="true"
+            android:id="@+id/build_route_clear_button"
+            android:background="@drawable/x_button"/>
 
+        <AutoCompleteTextView
+            android:id="@+id/build_route_search_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/build_route_clear_button"
+            android:layout_alignBottom="@id/build_route_clear_button"
+            android:singleLine="true"
+            android:ems="10"
+            android:hint="SEARCH HERE"/>
+
+
+
+    </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
